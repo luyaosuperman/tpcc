@@ -89,7 +89,9 @@ public class TpccStatements {
     }
 
     public void setAutoCommit(boolean b) throws SQLException {
-        conn.setAutoCommit(b);
+    	//synchronized(this) {
+    		conn.setAutoCommit(b);
+    	//}
     }
 
     /**
